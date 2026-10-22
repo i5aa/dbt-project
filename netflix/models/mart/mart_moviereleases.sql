@@ -3,7 +3,7 @@
 }}
 
 with fct_ratings as(
-    select * from {{ref('fcct_ratings')}}
+    select * from {{ref('fct_ratings')}}
 ),
 seed_dates as(
     select * from {{ref('movie_release_date')}}

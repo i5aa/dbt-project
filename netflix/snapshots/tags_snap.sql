@@ -10,7 +10,7 @@
 }}
 
 select {{dbt_utils.generate_surrogate_key(['user_id','movie_id','tag'])}} as s_key,
-user_id,movie_id,tag, cast(tag_timestamp as timestamp_ntz) as tag_timestamp
+user_id,movie_id,tag, cast("TIMESTAMP" as timestamp_ntz) as tag_timestamp
 from {{ref('src_tags')}}
 
 {%endsnapshot%}
